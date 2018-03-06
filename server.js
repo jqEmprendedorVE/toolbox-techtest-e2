@@ -1,7 +1,10 @@
 const express = require('express')
-var mongoose = require('mongoose')
+const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 const app = express()
+
+app.use(cors())
 
 const routes = require('./routes')
 
