@@ -9,7 +9,7 @@ const routes = require('./routes')
 Sección de configuración de la BD
  */
 
-mongoose.connect('mongodb://heroku_ckn2xh2d:8nuev1ngsle0nc78sct5bp7nu4@ds153958.mlab.com:53958/heroku_ckn2xh2d')
+mongoose.connect(proces.env.MONGODB_URI)
 mongoose.Promise = global.Promise
 
 const db = mongoose.connection
