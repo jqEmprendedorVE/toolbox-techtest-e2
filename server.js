@@ -9,7 +9,7 @@ const routes = require('./routes')
 Sección de configuración de la BD
  */
 
-mongoose.connect(proces.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI)
 mongoose.Promise = global.Promise
 
 const db = mongoose.connection
