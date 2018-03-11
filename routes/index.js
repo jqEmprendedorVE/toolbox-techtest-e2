@@ -19,7 +19,7 @@ router.get('/', (req, res) => res.json({welcome: 'Bienvenido a esta API REST'}))
 
 // Rutas definidas para el API
 router.get('/products', catchErrors(Product.getProducts))
-router.post('/products/sum/:id', catchErrors((req, res) => Product.updateQuantityProduct(req, res, true)))
-router.post('/products/substract/:id', catchErrors((req, res) => Product.updateQuantityProduct(req, res, false)))
+router.post('/products/:id/sum/', catchErrors((req, res) => Product.updateQuantityProduct(req, res, true)))
+router.post('/products/:id/substract', catchErrors((req, res) => Product.updateQuantityProduct(req, res, false)))
 
 module.exports = router
